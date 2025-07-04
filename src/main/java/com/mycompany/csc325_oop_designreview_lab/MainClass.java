@@ -4,39 +4,46 @@
 
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.Scanner;
+
 /**
+ * Driver class for the OOP Design Review Lab
+ * Demonstrates creation, configuration, and display of
+ * Student, Freshman, and Senior objects.
  *
  * @author MoaathAlrajab
  */
 public class MainClass {
 
  public static void main(String[] args) {
-		// ToDo 5: Fix the error
 
-		// ToDo 6: Fix the constructor of the Student class
+	// Create a basic student and assign address
+	Student std1= new Student("James", 20);
+	std1.setAddress("123 Farmingdale Ave");
 
-                // Todo 7: Create two classes for Freshman and Senior 
+	// Prompt for and set GPA
+ 	Scanner scnr = new Scanner(System.in);
+ 	System.out.print("Enter GPA for " + std1.getName() + ": ");
+ 	std1.setGPA(scnr.nextDouble());
 
-                // ToDo 8: The senior class should have a minimum of 85 credits  
 
-		// ToDo 9: Add a toString method for the Student class
-		// ToDo 10: Add a toString method for the Freshman class
+	// Create a freshman student, set address and GPA
+	Freshman std2 = new Freshman("Huda", 20, 12); // name, age, credits
+	std2.setAddress("321 Hurricane Ln");
+	std2.setGPA(3.0);
 
-		Student std1= new Student("James", 20);
-                // ToDo 11: Add a toString method for the Senior class
 
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
+	// Create a senior student, set address and GPA
+	Senior std3 = new Senior("Amaya", 30, 90);
+	std3.setAddress("456 Papaya Rd");
+	std3.setGPA(3.5);
 
-                Senior std2 = new Student("John", 30, 90);
+	// Display all student's info
+ 	System.out.println(std1);
+ 	System.out.println(std2);
+ 	System.out.println(std3);
 
-		// ToDo 12: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-
-		System.out.println(std1);
-
-                System.out.println(std2);
-
-		// ToDo 13: add comments and explain your code
+ 	scnr.close(); // close scanner
 
 	}
 
